@@ -1,0 +1,39 @@
+﻿{
+  "version": "1.0.0",
+  "title": "SQL Server Column Schema Extractor",
+  "description": "A Tool to extract column schema information from SQL server.",
+  "version": "1.0.0",
+  "authors": [ "angrifel" ],
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "outputName": "dotnet-sqlcolumnschemaextractor",
+    "embed": {
+      "include": [ "Resources/*.txt" ]
+    }
+  },
+
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0"
+    },
+    "System.Data.SqlClient": "4.1.0"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {}
+  },
+
+  "packOptions": {
+    "summary": "Executes a SQL query against a database and produces schema information of the columns in csv format.",
+    "projectUrl": "https://github.com/angrifel/SqlColumnSchemaExtractor",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+    "tags": [ "sql", "sqlserver", "schema", "metadata" ],
+    "owners": [ "angrifel" ],
+    "releaseNotes": "Initial Release.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angrifel/SqlColumnSchemaExtractor"
+    }
+  }
+}

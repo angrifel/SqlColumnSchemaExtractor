@@ -1,27 +1,42 @@
-namespace SqlColumnsSchemaExtractor
+namespace SqlColumnSchemaExtractor
 {
     public static class ArgumentsFunctions
     {
         public static Arguments Parse(string[] args)
         {
+            if (args.Length == 0) return null;
             var result = new Arguments() { UnrecognizedParameters = new System.Collections.Generic.List<string>() };
             for (int i = 0; i < args.Length; i++)
             {
                 var arg = args[i];
                 if (arg.Equals("-ConnectionString", System.StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ConnectionString = args[i + 1];
+                    if (i + 1 < args.Length)
+                    {
+                        result.ConnectionString = args[i + 1];
+                    }
+
                     i += 1;
                     continue;
                 }
                 else if (arg.Equals("-SqlStatement", System.StringComparison.OrdinalIgnoreCase))
                 {
+                    if (i + 1 < args.Length)
+                    {
+                        result.SqlStatement = args[i + 1];
+                    }
+
                     result.SqlStatement = args[i + 1];
                     i += 1;
                     continue;
                 }
                 else if (arg.Equals("-OutputFile", System.StringComparison.OrdinalIgnoreCase))
                 {
+                    if (i + 1 < args.Length)
+                    {
+                        result.OutputFile = args[i + 1];
+                    }
+
                     result.OutputFile = args[i + 1];
                     i += 1;
                     continue;

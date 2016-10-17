@@ -1,0 +1,18 @@
+Usage: dotnet sqlcolumnschemaextractor [options]
+Options:
+  -ConnectionString 
+  [mandatory] The connection string to connect to the database.
+  
+  -SqlStatement
+  [mandatory] The statement from which column schema information is extracted.
+  
+  -OutputFile
+  [optional]  The outputFile, if none is provided the output will be written 
+              to the stdout.
+  
+  -UseSchemeOnlyCommandBehavior
+  [optional]  This will cause the query to only return the schema and
+              not produce data.
+  
+  -Verbose
+  [optional]  Write detailed information.

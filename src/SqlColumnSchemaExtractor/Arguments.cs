@@ -1,4 +1,4 @@
-namespace SqlColumnsSchemaExtractor 
+namespace SqlColumnSchemaExtractor 
 {
     public class Arguments
     {

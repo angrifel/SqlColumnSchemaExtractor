@@ -1,14 +1,28 @@
-namespace SqlColumnsSchemaExtractor
+using System.IO;
+using System.Reflection;
+
+namespace SqlColumnSchemaExtractor
 {
     public static class ConsoleFunctions
     {
+        public static void DisplayHelpToStdout()
+        {
+            using (var helpSceenStream = Assembly.GetEntryAssembly().GetManifestResourceStream("SqlColumnsSchemaExtractor.Resources.HelpScreen.txt"))
+            {
+                using (var reader = new StreamReader(helpSceenStream))
+                {
+                    System.Console.WriteLine(reader.ReadToEnd());
+                }
+            }
+        }
+
         public static void DisplayArguments(Arguments arguments, System.IO.TextWriter output)
         {
             output.WriteLine("# Arguments");
             output.WriteLine("#   ConnectionString: " + arguments.ConnectionString);
             output.WriteLine("#   SqlStatement: " + arguments.SqlStatement);
             output.WriteLine("#   OutputFile: " + arguments.OutputFile);
-            output.WriteLine("#   UseFmtOnly: " + arguments.UseSchemeOnlyCommandBehavior);
+            output.WriteLine("#   UseSchemeOnlyCommandBehavior: " + arguments.UseSchemeOnlyCommandBehavior);
             output.WriteLine("#   Verbose: " + arguments.Verbose);
             if (arguments.UnrecognizedParameters.Count > 0)
             {
