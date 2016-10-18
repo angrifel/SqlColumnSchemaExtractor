@@ -7,7 +7,7 @@ namespace SqlColumnSchemaExtractor
     {
         public static void DisplayHelpToStdout()
         {
-            using (var helpSceenStream = Assembly.GetEntryAssembly().GetManifestResourceStream("SqlColumnsSchemaExtractor.Resources.HelpScreen.txt"))
+            using (var helpSceenStream = Assembly.GetEntryAssembly().GetManifestResourceStream("SqlColumnSchemaExtractor.Resources.HelpScreen.txt"))
             {
                 using (var reader = new StreamReader(helpSceenStream))
                 {

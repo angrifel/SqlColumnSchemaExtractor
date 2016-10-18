@@ -6,21 +6,23 @@
   "buildOptions": {
     "emitEntryPoint": true,
     "outputName": "dotnet-sqlcolumnschemaextractor",
+    "debugType": "portable",
     "embed": {
       "include": [ "Resources/*.txt" ]
     }
   },
 
-  "dependencies": {
-    "Microsoft.NETCore.App": {
-      "type": "platform",
-      "version": "1.0.0"
-    },
-    "System.Data.SqlClient": "4.1.0"
-  },
 
   "frameworks": {
-    "netcoreapp1.0": {}
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        },
+        "System.Data.SqlClient": "4.1.0"
+      }
+    }
   },
 
   "packOptions": {
