@@ -3,6 +3,7 @@
   "title": "SQL Server Column Schema Extractor",
   "description": "A Tool to extract column schema information from SQL server.",
   "authors": [ "angrifel" ],
+  "copyright": "angrifel",
   "buildOptions": {
     "emitEntryPoint": true,
     "outputName": "dotnet-sqlcolumnschemaextractor",
